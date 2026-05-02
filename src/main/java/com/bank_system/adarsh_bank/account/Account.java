@@ -19,6 +19,9 @@ public class Account {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
+    @jakarta.persistence.Version
+    private Long version;
+
     public Account() {}
 
     public Account(String accountNumber, double balance, Customer customer) {
@@ -38,4 +41,7 @@ public class Account {
 
     public Customer getCustomer() { return customer; }
     public void setCustomer(Customer customer) { this.customer = customer; }
+
+    public Long getVersion() { return version; }
+    public void setVersion(Long version) { this.version = version; }
 }

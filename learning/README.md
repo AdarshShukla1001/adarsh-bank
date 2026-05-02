@@ -27,6 +27,9 @@ Welcome to your learning journey! This directory is dedicated to your growth in 
   - [01 - REST and JavaScript](06-frontend-integration/01-rest-and-javascript.md)
 - `07-concurrency/`: Handling multiple tasks at once.
   - [01 - Concurrency Concepts](07-concurrency/01-concurrency-concepts.md)
+  - [02 - Locking Strategies](07-concurrency/02-locking-strategies.md)
+  - [03 - Advanced Locking and Scalability](07-concurrency/03-advanced-locking-and-scalability.md)
+  - [04 - Balance Sharding Interview Prep](07-concurrency/04-balance-sharding-interview-prep.md)
 
 ## How to use this
 Each subfolder contains markdown files and occasionally sample code. Follow the numbering to progress through the curriculum.
