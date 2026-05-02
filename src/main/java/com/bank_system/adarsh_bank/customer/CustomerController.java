@@ -15,9 +15,14 @@ public class CustomerController {
     @Autowired
     private CustomerRepository customerRepository;
 
+    @Autowired
+    private com.bank_system.adarsh_bank.notification.NotificationService notificationService;
+
     @PostMapping
     public Customer createCustomer(@RequestBody Customer customer) {
-        return customerRepository.save(customer);
+        Customer saved = customerRepository.save(customer);
+        notificationService.sendGlobalUpdate("CUSTOMER_REGISTERED_SUCCESSFULLY");
+        return saved;
     }
 
     @GetMapping

@@ -18,6 +18,9 @@ public class TransferService {
     @Autowired
     private TransactionRepository transactionRepository;
 
+    @Autowired
+    private com.bank_system.adarsh_bank.notification.NotificationService notificationService;
+
     @Transactional
     public void transferInternal(Long fromAccountId, Long toAccountId, double amount) {
         // 1. Fetch Accounts
@@ -42,6 +45,8 @@ public class TransferService {
         // 5. Log Transactions (Immutability)
         transactionRepository.save(new Transaction(amount, TransactionType.TRANSFER_OUT, fromAccount));
         transactionRepository.save(new Transaction(amount, TransactionType.TRANSFER_IN, toAccount));
+        
+        notificationService.sendGlobalUpdate("TRANSFER_COMPLETED_SUCCESSFULLY");
         
         // IMPORTANT: If any step above fails, the @Transactional annotation 
         // ensures that ALL changes are rolled back. No money is lost!

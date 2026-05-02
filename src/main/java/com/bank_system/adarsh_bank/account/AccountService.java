@@ -21,12 +21,18 @@ public class AccountService {
     @Autowired
     private CustomerRepository customerRepository;
 
+    @Autowired
+    private com.bank_system.adarsh_bank.notification.NotificationService notificationService;
+
     public AccountResponse createAccount(AccountRequest request) {
         Customer customer = customerRepository.findById(request.getCustomerId())
                 .orElseThrow(() -> new RuntimeException("Customer not found with id: " + request.getCustomerId()));
         
         Account account = AccountMapper.toEntity(request, customer);
         Account savedAccount = accountRepository.save(account);
+        
+        notificationService.sendGlobalUpdate("NEW_ACCOUNT_CREATED");
+        
         return AccountMapper.toResponse(savedAccount);
     }
 

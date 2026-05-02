@@ -25,6 +25,8 @@ Welcome to your learning journey! This directory is dedicated to your growth in 
   - [03 - Transaction and Transfer Flow](05-banking-app-design/03-transaction-and-transfer-flow.md)
 - `06-frontend-integration/`: Building the User Interface.
   - [01 - REST and JavaScript](06-frontend-integration/01-rest-and-javascript.md)
+- `07-concurrency/`: Handling multiple tasks at once.
+  - [01 - Concurrency Concepts](07-concurrency/01-concurrency-concepts.md)
 
 ## How to use this
 Each subfolder contains markdown files and occasionally sample code. Follow the numbering to progress through the curriculum.

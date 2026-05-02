@@ -31,6 +31,40 @@
             </div>
         </div>
 
+        <div class="grid" style="margin-top: 3rem;">
+            <!-- Create Customer Form -->
+            <div class="card">
+                <h3>👤 Create Customer</h3>
+                <input type="text" id="cust-name" placeholder="Name" class="input">
+                <input type="email" id="cust-email" placeholder="Email" class="input">
+                <button class="btn" onclick="createCustomer()">Register</button>
+            </div>
+
+            <!-- Create Account Form -->
+            <div class="card">
+                <h3>💳 Open Account</h3>
+                <input type="text" id="acc-number" placeholder="Account Number" class="input">
+                <select id="acc-cust-id" class="input">
+                    <option value="">Select Customer</option>
+                </select>
+                <input type="number" id="acc-balance" placeholder="Initial Balance" class="input">
+                <button class="btn" onclick="openAccount()">Open</button>
+            </div>
+
+            <!-- Transfer Money Form -->
+            <div class="card">
+                <h3>💸 Transfer Money</h3>
+                <select id="trans-from" class="input">
+                    <option value="">From Account</option>
+                </select>
+                <select id="trans-to" class="input">
+                    <option value="">To Account</option>
+                </select>
+                <input type="number" id="trans-amount" placeholder="Amount" class="input">
+                <button class="btn" onclick="transferMoney()">Send</button>
+            </div>
+        </div>
+
         <div style="margin-top: 3rem;">
             <h2>Recent Accounts</h2>
             <div class="card">
@@ -51,6 +85,8 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
