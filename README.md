@@ -12,9 +12,9 @@ The objective of this project is to build a robust banking system while becoming
 ## 📚 Learning Path
 I have built a dedicated learning module inside this project to track progress. If you are new here, start with the learning docs:
 
-- **[Learning Center](file:///Users/adarshshukla/Desktop/LEARNING/banking-system/adarsh-bank/learning/README.md)**: A structured guide to Java and Spring Boot.
-- **[Java Basics](file:///Users/adarshshukla/Desktop/LEARNING/banking-system/adarsh-bank/learning/01-java-basics/)**: Syntax, Structure, and Maven.
-- **[Spring Boot Core](file:///Users/adarshshukla/Desktop/LEARNING/banking-system/adarsh-bank/learning/02-spring-boot-core/)**: Beans, Dependency Injection, and APIs.
+- **[Learning Center](learning/README.md)**: A structured guide to Java and Spring Boot.
+- **[Java Basics](learning/01-java-basics/)**: Syntax, Structure, and Maven.
+- **[Spring Boot Core](learning/02-spring-boot-core/)**: Beans, Dependency Injection, and APIs.
 
 ## 🛠 Tech Stack
 - **Language**: Java 17+

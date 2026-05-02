@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Bank | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏦 Adarsh Bank</h1>
+            <div>
+                <button class="btn" onclick="loadDashboard()">🔄 Refresh Data</button>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- Summary Stats -->
+            <div class="card">
+                <div class="card-title">Total Customers</div>
+                <div id="total-customers" class="card-value">0</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Total Accounts</div>
+                <div id="total-accounts" class="card-value">0</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Total Liquidity</div>
+                <div id="total-liquidity" class="card-value">$0.00</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h2>Recent Accounts</h2>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Account Number</th>
+                            <th>Customer ID</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="accounts-table">
+                        <!-- Data will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
